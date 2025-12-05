@@ -38,6 +38,9 @@
     "@types/node": "^22.13.1",
     "tsup": "^8.3.6",
     "typescript": "^5.6.3",
-    "vitest": "^2.1.5"
+    "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "stopreg-email-blocker": "^0.1.0"
   }
 }
