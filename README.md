@@ -5,7 +5,7 @@ Lightweight client for the StopReg email validation API. Fetches `isDisposable` 
 ## Install
 
 ```bash
-npm install stopreg-email-blocker
+npm install @zendx/stopreg-email-blocker
 ```
 
 Requires Node.js 18+ (for built-in `fetch`).
@@ -72,6 +72,21 @@ Returns a boolean convenience wrapper over `check`.
 3. Publish: `npm publish`
 
 If you change the package name, update `package.json` accordingly. The published tarball includes `dist/` via the `files` entry.
+
+## Publishing to GitHub Packages (@zendx scope)
+
+1. Add to `~/.npmrc` (do not commit tokens):
+   ```
+   @zendx:registry=https://npm.pkg.github.com
+   //npm.pkg.github.com/:_authToken=YOUR_GITHUB_PAT
+   ```
+   PAT needs `write:packages` (and `repo` if the repo is private).
+2. Build and publish:
+   ```bash
+   npm run build
+   npm publish
+   ```
+3. CI workflow `.github/workflows/publish.yml` will test/build on push to `main` and publish on releases/tags using `GITHUB_TOKEN`.
 
 ## CLI / Integration tests
 

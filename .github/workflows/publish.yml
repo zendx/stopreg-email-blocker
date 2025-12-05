@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-          scope: "@stopreg"
+          scope: "@zendx"
       - run: npm ci
       - run: npm test
       - run: npm run build
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-          scope: "@stopreg"
+          scope: "@zendx"
       - run: npm ci
       - run: npm run build
       - run: npm publish
