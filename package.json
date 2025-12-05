@@ -1,5 +1,5 @@
 {
-  "name": "@stopreg/stopreg-email-blocker",
+  "name": "@zendx/stopreg-email-blocker",
   "version": "0.1.0",
   "description": "Lightweight StopReg API client for Node.js/TypeScript",
   "type": "module",
