@@ -1,5 +1,5 @@
 {
-  "name": "@zendx/stopreg-email-blocker",
+  "name": "stopreg-email-blocker",
   "version": "0.1.0",
   "description": "Lightweight StopReg API client for Node.js/TypeScript",
   "type": "module",
@@ -12,9 +12,6 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"

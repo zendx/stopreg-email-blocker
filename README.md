@@ -65,18 +65,13 @@ Returns `{ email, domain, isDisposable, raw }`. Throws on HTTP errors with typed
 
 Returns a boolean convenience wrapper over `check`.
 
-## Publishing to GitHub Packages
+## Publishing to npmjs.com
 
-Package is configured for the `@stopreg` scope and GitHub Packages registry. To publish:
+1. Ensure you are logged in: `npm login`
+2. Build the package: `npm run build`
+3. Publish: `npm publish`
 
-```bash
-echo "//npm.pkg.github.com/:_authToken=YOUR_GITHUB_PAT" > ~/.npmrc  # or login interactively
-npm login --registry=https://npm.pkg.github.com --scope=@stopreg   # optional if .npmrc has token
-npm run build
-npm publish
-```
-
-Your PAT needs `write:packages` (and `repo` if the repo is private). Update the scope/registry in `.npmrc` and `package.json` if you use a different scope.
+If you change the package name, update `package.json` accordingly. The published tarball includes `dist/` via the `files` entry.
 
 ## CLI / Integration tests
 
